@@ -2,6 +2,18 @@
 
 In this Data Science Project, I will apply a classification model with Machine Learning that can predict a gene's function based on the DNA sequencing of the coding sequence alone.
 
+Treating DNA sequence as a “language”, otherwise known as k-mer counting
+A challenge that remains is that none of these above methods results in vectors of uniform length, and that is a requirement for feeding data to a classification or regression algorithm.
+
+So with the above methods you have to resort to things like truncating sequences or padding with “n” or “0” to get vectors of uniform length.
+
+DNA and protein sequences can be viewed metaphorically as the language of life. The language encodes instructions as well as function for the molecules that are found in all life forms.
+
+Here I am using hexamer “words” but that is arbitrary and word length can be tuned to suit the particular situation. The word length and amount of overlap need to be determined empirically for any given application.
+
+In genomics, we refer to these types of manipulations as “k-mer counting”, or counting the occurrences of each possible k-mer sequence. There are specialized tools for this, but the Python natural language processing tools make it super easy.
+
+
 ## Overview
 
 This project focuses on DNA sequencing analysis using a classification model. The goal is to predict the function of a gene based on its DNA sequence. The project utilizes a multinomial naive Bayes classifier and applies the Bag of Words approach using CountVectorizer for feature extraction.
